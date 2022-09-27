@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../core/constants.dart';
+import '../../../core/constants.dart';
 
 class AppNameText extends StatelessWidget {
   const AppNameText({
@@ -13,16 +13,17 @@ class AppNameText extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.start,
       children: [
         Stack(
+          alignment: AlignmentDirectional.centerEnd,
           clipBehavior: Clip.none,
           children: [
             Positioned(
-              left: 50,
+              left: 77,
               child: Container(
                 decoration: const BoxDecoration(
                     shape: BoxShape.circle,
                     color: Color.fromRGBO(97, 108, 242, 1.0)),
-                width: 28,
-                height: 28,
+                width: 42,
+                height: 42,
               ),
             ),
             RichText(
@@ -30,13 +31,12 @@ class AppNameText extends StatelessWidget {
                     text: 'Up Inv',
                     style: TextStyle(
                         color: Constants.peachColor,
-                        fontSize: 18,
-                        fontWeight: FontWeight.w500),
+                        fontSize: 26,
+                        fontWeight: FontWeight.w400),
                     children: [
                   TextSpan(
                       text: 'est',
                       style: TextStyle(
-                        fontSize: 18,
                         fontWeight: FontWeight.w900,
                       ))
                 ])),

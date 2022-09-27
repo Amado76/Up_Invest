@@ -9,8 +9,5 @@ class Constants {
   static const Color greyColor = Color.fromRGBO(180, 181, 183, 1.0);
   static const Color textButtonCollor = Color.fromRGBO(186, 185, 208, 1.0);
 
-  TextStyle tittleStyle = TextStyle(fontSize: 26,color: peachColor);
-  
-
-
+  TextStyle tittleStyle = const TextStyle(fontSize: 26, color: peachColor);
 }

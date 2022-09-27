@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_modular/flutter_modular.dart';
 
 class ButtonGetStarted extends StatelessWidget {
   const ButtonGetStarted({
@@ -10,22 +11,25 @@ class ButtonGetStarted extends StatelessWidget {
     return Directionality(
       textDirection: TextDirection.rtl,
       child: ElevatedButton.icon(
-        icon: const ImageIcon(AssetImage('assets/icons/short_right.png'),
-            size: 25),
-        onPressed: () {},
+        icon: const ImageIcon(
+            AssetImage(
+              'assets/icons/short_right.png',
+            ),
+            size: 40),
+        onPressed: () => Modular.to.navigate('/auth'),
         style: ElevatedButton.styleFrom(
             alignment: Alignment.centerLeft,
-            minimumSize: const Size(400, 45),
-            primary: Colors.white,
-            onPrimary: const Color.fromRGBO(122, 128, 142, 1.0),
+            minimumSize: const Size(400, 65),
+            backgroundColor: Colors.white,
+            foregroundColor: const Color.fromRGBO(122, 128, 142, 1.0),
             shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(10))),
         label: const Padding(
-          padding: EdgeInsets.only(right: 120.0),
+          padding: EdgeInsets.only(right: 142.0),
           child: Text(
             'Inicie sua Jornada',
             style: TextStyle(
-              fontSize: 16,
+              fontSize: 18,
               fontWeight: FontWeight.bold,
             ),
           ),
