@@ -1,18 +1,26 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
 
 import '../../../core/constants.dart';
 
-class RememberMe extends StatefulWidget {
-  const RememberMe({Key? key}) : super(key: key);
+class CustomCheckBox extends StatefulWidget {
+  final String text;
+  final Color color;
+
+  const CustomCheckBox({
+    Key? key,
+    this.text = '',
+    this.color = Colors.transparent,
+  }) : super(key: key);
 
   @override
-  State<RememberMe> createState() => _RememberMeState();
+  State<CustomCheckBox> createState() => _CustomCheckBoxState();
 }
 
-class _RememberMeState extends State<RememberMe> {
+class _CustomCheckBoxState extends State<CustomCheckBox> {
+  bool isChecked = false;
   @override
   Widget build(BuildContext context) {
-    bool isChecked = true;
     return Row(
       children: [
         SizedBox(
@@ -29,13 +37,13 @@ class _RememberMeState extends State<RememberMe> {
               value: isChecked,
               onChanged: (bool? value) {
                 setState(() {
-                  isChecked = value!;
+                  isChecked = !isChecked;
                 });
               }),
         ),
-        const Text(
-          'Manter Logado',
-          style: TextStyle(color: Colors.white),
+        Text(
+          widget.text,
+          style: TextStyle(color: widget.color),
         ),
       ],
     );

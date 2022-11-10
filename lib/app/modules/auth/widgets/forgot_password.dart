@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_modular/flutter_modular.dart';
 
 import '../../../core/constants.dart';
 
@@ -10,7 +11,7 @@ class ForgotPassword extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextButton(
-      onPressed: () {},
+      onPressed: () => Modular.to.navigate('/auth/forgotpassword'),
       child: const Text(
         'Esqueceu a Senha?',
         style: TextStyle(color: Constants.peachColor),
